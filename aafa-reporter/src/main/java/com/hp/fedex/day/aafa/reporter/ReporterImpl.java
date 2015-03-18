@@ -73,17 +73,17 @@ public class ReporterImpl implements Reporter {
 
     private JRDataSource createDataSource(List<AnalyzeResult> analyzeResultList) {
         DRDataSource dataSource = new DRDataSource("testCaseName", "status", "analysisResult", "failedStep", "callStack");
-//        for(AnalyzeResult analyzeResult : analyzeResultList) {
-//            ReporterViewData reporterViewData = new ReporterViewData();
-//            reporterViewData.build(analyzeResult);
-//            dataSource.add(reporterViewData.getTestCaseName(), reporterViewData.getStatus(), reporterViewData.getAnalysisResult(),
-//                    reporterViewData.getFailedStep(), reporterViewData.getCallStack());
-//        }
+        for(AnalyzeResult analyzeResult : analyzeResultList) {
+            ReporterViewData reporterViewData = new ReporterViewData();
+            reporterViewData.build(analyzeResult);
+            dataSource.add(reporterViewData.getTestCaseName(), reporterViewData.getStatus(), reporterViewData.getAnalysisResult(),
+                    reporterViewData.getFailedStep(), reporterViewData.getCallStack());
+        }
 
-        dataSource.add("Test A", "Success", "analysisResult", "failedStep" , "callStack");
-        dataSource.add("Test B", "Warn", "analysisResult", "failedStep", "callStack");
-        dataSource.add("Test C", "Error", "analysisResult", "failedStep", "callStack");
-        dataSource.add("Test D", "Success", "analysisResult", "failedStep", "callStack");
+//        dataSource.add("Test A", "Success", "analysisResult", "failedStep" , "callStack");
+//        dataSource.add("Test B", "Warn", "analysisResult", "failedStep", "callStack");
+//        dataSource.add("Test C", "Error", "analysisResult", "failedStep", "callStack");
+//        dataSource.add("Test D", "Success", "analysisResult", "failedStep", "callStack");
         return dataSource;
     }
 
