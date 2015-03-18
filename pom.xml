@@ -11,6 +11,7 @@
         <module>aafa-analyzer</module>
         <module>aafa-reporter</module>
         <module>aafa-model</module>
+        <module>aafa-execute</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -22,19 +23,19 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>3.8.1</version>
+          <scope>test</scope>
+       </dependency>
       <dependency>
           <groupId>org.projectlombok</groupId>
           <artifactId>lombok</artifactId>
           <version>1.16.2</version>
           <scope>provided</scope>
-      </dependency>
-      <dependency>
+       </dependency>
+        <dependency>
           <groupId>com.google.guava</groupId>
           <artifactId>guava</artifactId>
           <version>18.0</version>
