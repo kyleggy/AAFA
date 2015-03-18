@@ -17,12 +17,14 @@ public class DataGenerator {
     private static final String testResultAFailedStepCallStack = "FAILURE Checking Page Count = [1] of : 'Select2 Li Element' in 'Select2 Dropdown Ul Element' in 'Drop Down List'";
     private static final String testResultAQCId = "10905";
     private static DefectStatus testResultAQCStatus = DefectStatus.Open;
+    private static final String testResultAQCTitle = "Check page count error happen on test:catalogManagement";
 
     private static final String testResultBName = "SelfServicePortalAdministrationThemeSettings";
     private static final String testResultBFailedStep = "start After - delete images";
     private static final String testResultBFailedStepCallStack = "FAILURE Clicking on : 'Delete Image Button' in 'Image Uploader' in 'Saw Base Page' in 'Theme Settings Page'";
     private static final String testResultBQCId = "11201";
     private static DefectStatus testResultBQCStatus = DefectStatus.Close;
+    private static final String testResultBQCTitle = "Failed to delete Image Button on test:catalogManagement";
 
     private static final String testResultCName = "serviceLevelManagement";
     private static final String testResultCFailedStep = "Open Incident with High priority and open SLT tab";
@@ -65,12 +67,14 @@ public class DataGenerator {
         defectResultA.setFailedStep(testResultAFailedStep);
         defectResultA.setFailedStepCallStack(testResultAFailedStepCallStack);
         defectResultA.setDefectStatus(testResultAQCStatus);
+        defectResultA.setTitle(testResultAQCTitle);
 
         DefectResult defectResultB = new DefectResult();
         defectResultB.setId(testResultBQCId);
         defectResultB.setFailedStep(testResultBFailedStep);
         defectResultB.setFailedStepCallStack(testResultBFailedStepCallStack);
         defectResultB.setDefectStatus(testResultBQCStatus);
+        defectResultB.setTitle(testResultBQCTitle);
 
         DefectResult defectResultC = new DefectResult();
         defectResultC.setId(testResultCQCId);
