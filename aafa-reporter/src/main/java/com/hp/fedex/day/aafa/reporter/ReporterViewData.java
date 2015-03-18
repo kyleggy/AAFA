@@ -62,8 +62,13 @@ public class ReporterViewData {
     public void build(AnalyzeResult analyzeResult) {
         this.testCaseName = analyzeResult.getTestResult().getTestCaseName();
         this.status = analyzeResult.getAnalyzeStatus().toString();
-        this.analysisResult = "DefectID: " + analyzeResult.getDefectResult().getId()
-            + " Title: " + analyzeResult.getDefectResult().getTitle();
+        if(analyzeResult.getDefectResult().getId() != null) {
+            this.analysisResult = "DefectID: " + analyzeResult.getDefectResult().getId()
+                    + " Title: " + analyzeResult.getDefectResult().getTitle();
+        } else {
+            this.analysisResult = "N/A";
+        }
+
         this.failedStep = analyzeResult.getDefectResult().getFailedStep();
         this.callStack = analyzeResult.getDefectResult().getFailedStepCallStack();
     }

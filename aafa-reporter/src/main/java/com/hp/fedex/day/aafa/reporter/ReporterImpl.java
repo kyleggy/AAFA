@@ -34,10 +34,10 @@ public class ReporterImpl implements Reporter {
         StyleBuilder columnTitleStyle  = DynamicReports.stl.style(boldCenteredStyle)
                                             .setBorder(DynamicReports.stl.pen1Point())
                                             .setBackgroundColor(Color.LIGHT_GRAY)
-                                            .setFontSize(12);
+                                            .setFontSize(20);
         StyleBuilder titleStyle = DynamicReports.stl.style(boldCenteredStyle)
                                     .setVerticalAlignment(VerticalAlignment.MIDDLE)
-                                    .setFontSize(25);
+                                    .setFontSize(35);
 
         TextColumnBuilder<String> analyzeStatusColumn = DynamicReports.col.column("Analysis Status", "status", DynamicReports.type.stringType()).setStyle(boldStyle);
         ConditionalStyleBuilder condition1 = DynamicReports.stl.conditionalStyle(DynamicReports.cnd.equal(analyzeStatusColumn, "Success"))
