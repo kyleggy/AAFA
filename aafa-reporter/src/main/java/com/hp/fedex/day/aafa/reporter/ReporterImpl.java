@@ -57,9 +57,9 @@ public class ReporterImpl implements Reporter {
                     DynamicReports.col.column("Call Stack", "callStack", DynamicReports.type.stringType()))
                     .setColumnTitleStyle(columnTitleStyle)
                     .detailRowHighlighters(condition1, condition2, condition3)
-                    .title(DynamicReports.cmp.text("Analysis Report").setStyle(titleStyle).setFixedHeight(60))
+                    .title(DynamicReports.cmp.text("Analysis Report").setStyle(titleStyle).setFixedHeight(65))
                     .pageFooter(DynamicReports.cmp.pageXofY().setStyle(boldCenteredStyle))
-                    .setPageFormat(1200, 1500, PageOrientation.PORTRAIT)
+                    .setPageFormat(1500, 1800, PageOrientation.PORTRAIT)
                     .setDataSource(createDataSource(analyzeResultList))
                     .export(DynamicReports.export.htmlExporter("C:/temp/test.html"));
 //                    .show();
