@@ -11,53 +11,13 @@ import java.util.List;
  * Created by fuling on 3/18/2015.
  */
 
-
+@Data
 public class ReporterViewData {
     private String testCaseName;
     private String status;
     private String analysisResult;
     private String failedStep;
     private String callStack;
-
-    public String getTestCaseName() {
-        return testCaseName;
-    }
-
-    public void setTestCaseName(String testCaseName) {
-        this.testCaseName = testCaseName;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getAnalysisResult() {
-        return analysisResult;
-    }
-
-    public void setAnalysisResult(String analysisResult) {
-        this.analysisResult = analysisResult;
-    }
-
-    public String getFailedStep() {
-        return failedStep;
-    }
-
-    public void setFailedStep(String failedStep) {
-        this.failedStep = failedStep;
-    }
-
-    public String getCallStack() {
-        return callStack;
-    }
-
-    public void setCallStack(String callStack) {
-        this.callStack = callStack;
-    }
 
     public void build(AnalyzeResult analyzeResult) {
         this.testCaseName = analyzeResult.getTestResult().getTestCaseName();
