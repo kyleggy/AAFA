@@ -2,6 +2,7 @@ package com.hp.fedex.day.aafa.jenkins;
 
 import com.hp.fedex.day.aafa.model.TestResult;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,6 +12,7 @@ public class JenkinsImpl implements Jenkins {
 
     @Override
     public List<TestResult> getFailureTestResults(String projectName, String buildId, String branchName) {
-        return null;
+
+        return new ArrayList<TestResult>();
     }
 }
