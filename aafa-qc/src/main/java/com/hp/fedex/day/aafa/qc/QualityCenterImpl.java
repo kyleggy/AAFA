@@ -3,6 +3,7 @@ package com.hp.fedex.day.aafa.qc;
 import com.hp.fedex.day.aafa.model.DefectResult;
 import com.hp.fedex.day.aafa.model.TestResult;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +14,6 @@ public class QualityCenterImpl implements QualityCenter {
 
     @Override
     public Map<TestResult, DefectResult> getDefectResults(List<TestResult> testResultList) {
-        return null;
+        return new HashMap<TestResult, DefectResult>();
     }
 }

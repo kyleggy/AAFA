@@ -9,39 +9,35 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>aafa-reporter</artifactId>
+    <artifactId>aafa-execute</artifactId>
 
     <dependencies>
-
         <dependency>
             <groupId>com.hp.fedex.day</groupId>
             <artifactId>aafa-model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.2</version>
+            <groupId>com.hp.fedex.day</groupId>
+            <artifactId>aafa-jenkins</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>net.sourceforge.dynamicreports</groupId>
-            <artifactId>dynamicreports-core</artifactId>
-            <version>4.0.0</version>
+            <groupId>com.hp.fedex.day</groupId>
+            <artifactId>aafa-qc</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>net.sourceforge.dynamicreports</groupId>
-            <artifactId>dynamicreports-adhoc</artifactId>
-            <version>4.0.0</version>
+            <groupId>com.hp.fedex.day</groupId>
+            <artifactId>aafa-reporter</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>net.sourceforge.dynamicreports</groupId>
-            <artifactId>dynamicreports-googlecharts</artifactId>
-            <version>4.0.0</version>
+            <groupId>com.hp.fedex.day</groupId>
+            <artifactId>aafa-analyzer</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
-
-
 
 
 </project>
