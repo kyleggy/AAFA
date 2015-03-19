@@ -1,4 +1,4 @@
-package com.hp.fedex.day.aafa.execute;
+package com.hp.fedex.day.aafa.analyzer;
 
 import com.hp.fedex.day.aafa.model.*;
 
@@ -10,18 +10,34 @@ import java.util.Map;
 /**
  * Created by lizhaok on 3/18/2015.
  */
-public class DataGenerator {
+public class AnalyzerHelper {
 
     private static final String testResultAName = "catalogManagement";
     private static final String testResultAFailedStep = "Edit the service offering and go to User options tab: choose the created Fulfillment plan";
-    private static final String testResultAFailedStepCallStack = "FAILURE Checking Page Count = [1] of : 'Select2 Li Element' in 'Select2 Dropdown Ul Element' in 'Drop Down List'";
+    private static final String testResultAFailedStepCallStack = "Exception Occur: Failed to execute event: Checking Page Count = [1] of\n" +
+            "Caused by: Could not located element!!! Expected page number to be [1] but was [0]\n" +
+            "Stack Trace: \n" +
+            "com.hp.maas.platform.ui.test.exception.MaasUIAutomationException: Could not located element!!! Expected page number to be [1] but was [0]\n" +
+            "     at com.hp.maas.platform.ui.test.selenium.wd.ExpectsImpl.verifyExpectedPagesCount(ExpectsImpl.java:458)\n" +
+            "     at com.hp.maas.platform.ui.test.selenium.wd.ExpectsImpl.access$800(ExpectsImpl.java:24)\n" +
+            "     at com.hp.maas.platform.ui.test.selenium.wd.ExpectsImpl$20.execute(ExpectsImpl.java:451)\n" +
+            "     at com.hp.maas.platform.ui.test.selenium.wd.BaseDriverExecutorImpl$1.apply(BaseDriverExecutorImpl.java:107)\n" +
+            "     at com.hp.maas.platform.ui.test.selenium.wd.BaseDriverExecutorImpl$1.apply(BaseDriverExecutorImpl.java:103)";
     private static final String testResultAQCId = "10905";
     private static DefectStatus testResultAQCStatus = DefectStatus.Open;
     private static final String testResultAQCTitle = "Check page count error happen on test:catalogManagement";
 
     private static final String testResultBName = "SelfServicePortalAdministrationThemeSettings";
     private static final String testResultBFailedStep = "start After - delete images";
-    private static final String testResultBFailedStepCallStack = "FAILURE Clicking on : 'Delete Image Button' in 'Image Uploader' in 'Saw Base Page' in 'Theme Settings Page'";
+    private static final String testResultBFailedStepCallStack = "Exception Occur: Failed to execute event: Clicking on\n" +
+            "\n" +
+            "Caused by: Unable to click not visible element\n" +
+            "\n" +
+            "Stack Trace: \n" +
+            "com.hp.maas.platform.ui.test.exception.MaasUIAutomationException: Unable to click not visible element\n" +
+            "     at com.hp.maas.platform.ui.test.selenium.wd.ActionsImpl.atomicClick(ActionsImpl.java:134)\n" +
+            "     at com.hp.maas.platform.ui.test.selenium.wd.ActionsImpl$4.execute(ActionsImpl.java:89)\n" +
+            "     at com.hp.maas.platform.ui.test.selenium.wd.BaseDriverExecutorImpl$1.apply(BaseDriverExecutorImpl.java:107)";
     private static final String testResultBQCId = "11201";
     private static DefectStatus testResultBQCStatus = DefectStatus.Close;
     private static final String testResultBQCTitle = "Failed to delete Image Button on test:catalogManagement";
